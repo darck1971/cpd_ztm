@@ -3,6 +3,10 @@ from driving import driving
 from listslicer import listslicer
 from passwordchecker import passwordchecker
 from picture import picture
+from duplicatecheck import duplicatecheck
+from saysomething import saysomething
+from checkdriverage import checkdriverage
+from highesteven import highesteven
 
 while True:
   program_choice = input("""Please choose which program you want to run:\n 
@@ -11,6 +15,10 @@ while True:
     3. List Slicer  
     4. Password Checker  
     5. Picture
+    6. Duplicate Check
+    7. Say Something
+    8. Check Driver Age
+    9. Highest even number in list
     0. Exit Program 
 \n""")
   
@@ -25,6 +33,17 @@ while True:
     passwordchecker()
   elif program_choice == "5":
     picture()
+  elif program_choice == "6":
+    duplicatecheck()
+  elif program_choice == "7":
+    thingtosay = input("What do you want to say?")
+    saysomething(thingtosay)
+  elif program_choice == "8":
+    driverage = input("What is the driver\'s age?")
+    checkdriverage(driverage)
+  elif program_choice == "9":
+    sortlist = [10,2,3,4,8,11]
+    print(highesteven(sortlist))
   elif program_choice == "0":
     break
   else:
